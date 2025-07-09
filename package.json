@@ -1,0 +1,51 @@
+{
+  "name": "twinkle",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc && cp src/index.html dist/",
+    "start": "npm run build && electron-forge start",
+    "dev": "npm run build && electron . --dev",
+    "package": "npm run build && electron-forge package",
+    "make": "npm run build && electron-forge make",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file-organizer",
+    "ai",
+    "electron",
+    "claude"
+  ],
+  "author": "Mikkel Krogsholm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikkelkrogsholm/twinkle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mikkelkrogsholm/twinkle/issues"
+  },
+  "homepage": "https://github.com/mikkelkrogsholm/twinkle#readme",
+  "description": "AI-powered file organization using Claude Code SDK",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.1",
+    "@electron-forge/maker-deb": "^7.8.1",
+    "@electron-forge/maker-dmg": "^7.8.1",
+    "@electron-forge/maker-rpm": "^7.8.1",
+    "@electron-forge/maker-squirrel": "^7.8.1",
+    "@electron-forge/maker-zip": "^7.8.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.1",
+    "@electron-forge/plugin-fuses": "^7.8.1",
+    "@electron/fuses": "^1.8.0",
+    "@types/chokidar": "^1.7.5",
+    "@types/node": "^24.0.12",
+    "electron": "^37.2.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.44",
+    "chokidar": "^4.0.3",
+    "dotenv": "^17.2.0",
+    "electron-squirrel-startup": "^1.0.1"
+  }
+}
